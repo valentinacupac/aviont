@@ -1,4 +1,4 @@
-# Optivem OpenData (C#)
+# Optivem OpenData Connector (C#)
 
 The purpose of this project is to enable easy access to various OpenData sources.
 * Enable connecting to various data sources (e.g. Quandl, etc.)
