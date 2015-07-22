@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Applicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Test", "Optivem.OpenData.Test\Optivem.OpenData.Test.csproj", "{32DC66C6-2F85-4CFD-A8E0-597890833147}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Connectors", "Optivem.OpenData.Connectors\Optivem.OpenData.Connectors.csproj", "{40A29387-C477-4E6D-8F51-0DAB34DC62D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{32DC66C6-2F85-4CFD-A8E0-597890833147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32DC66C6-2F85-4CFD-A8E0-597890833147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32DC66C6-2F85-4CFD-A8E0-597890833147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40A29387-C477-4E6D-8F51-0DAB34DC62D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A29387-C477-4E6D-8F51-0DAB34DC62D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A29387-C477-4E6D-8F51-0DAB34DC62D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A29387-C477-4E6D-8F51-0DAB34DC62D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
