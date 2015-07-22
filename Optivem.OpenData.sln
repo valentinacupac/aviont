@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData", "Optivem.OpenData.csproj", "{D611556C-7072-4B12-BCBA-131B78CC08FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData", "Optivem.OpenData\Optivem.OpenData.csproj", "{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Application", "Optivem.OpenData.Application\Optivem.OpenData.Application.csproj", "{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Test", "Optivem.OpenData.Test\Optivem.OpenData.Test.csproj", "{32DC66C6-2F85-4CFD-A8E0-597890833147}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D611556C-7072-4B12-BCBA-131B78CC08FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D611556C-7072-4B12-BCBA-131B78CC08FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D611556C-7072-4B12-BCBA-131B78CC08FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D611556C-7072-4B12-BCBA-131B78CC08FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32DC66C6-2F85-4CFD-A8E0-597890833147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32DC66C6-2F85-4CFD-A8E0-597890833147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32DC66C6-2F85-4CFD-A8E0-597890833147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32DC66C6-2F85-4CFD-A8E0-597890833147}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
