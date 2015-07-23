@@ -1,11 +1,8 @@
-# Optivem OpenData Connector (C#)
+# Optivem OpenData (C#)
 
 The purpose of this project is to enable easy access to various OpenData sources.
-
 * Enable connecting to various OpenData providers [in-progress: Milestone 1]
-
 * Provide a console interface for command line users to organize downloads [pending: Milestone 2]
-
 * Provide an easy-to-use GUI application to organize downloaded files [pending: Milestone 3]
 
 Supported providers:
