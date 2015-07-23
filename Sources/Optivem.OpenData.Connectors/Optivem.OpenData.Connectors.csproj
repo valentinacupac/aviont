@@ -30,12 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Optivem.OpenData.Quandl">
-      <HintPath>..\Libraries\Optivem.OpenData.Quandl.dll</HintPath>
-    </Reference>
-    <Reference Include="Optivem.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libraries\Optivem.Utilities.dll</HintPath>
+    <Reference Include="Optivem.Utilities">
+      <HintPath>..\..\Libraries\Optivem.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,6 +46,10 @@
     <Compile Include="QuandlQueryPathFactory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Optivem.OpenData.Quandl\Optivem.OpenData.Quandl.csproj">
+      <Project>{bf4c1359-5dd0-4bc6-8284-19a4b89cd2a7}</Project>
+      <Name>Optivem.OpenData.Quandl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Optivem.OpenData\Optivem.OpenData.csproj">
       <Project>{3e92a0c4-9908-49ef-b0aa-6d73074ae47c}</Project>
       <Name>Optivem.OpenData</Name>
