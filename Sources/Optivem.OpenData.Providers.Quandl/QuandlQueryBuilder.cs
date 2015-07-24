@@ -9,7 +9,7 @@ namespace Optivem.OpenData.Quandl
     /// <summary>
     /// Builder for Quandl queries (using fluent syntax)
     /// </summary>
-    public class QueryBuilder
+    public class QuandlQueryBuilder
     {
         /// <summary>
         /// Constructs the builder
@@ -17,7 +17,7 @@ namespace Optivem.OpenData.Quandl
         /// <param name="databaseCode">Represents the unique Quandl code which identifies the database</param>
         /// <param name="tableCode">Represents the Quandl code which identifies the table</param>
         /// <param name="formatCode">Represents the type of the file in which data will be downloaded</param>
-        public QueryBuilder(string databaseCode, string tableCode, FileType formatCode)
+        public QuandlQueryBuilder(string databaseCode, string tableCode, FileType formatCode)
         {
             this.DatabaseCode = databaseCode;
             this.TableCode = tableCode;
@@ -94,7 +94,7 @@ namespace Optivem.OpenData.Quandl
         /// </summary>
         /// <param name="authToken">Represents the authentication token</param>
         /// <returns>The current builder instance</returns>
-        public QueryBuilder SetAuthToken(string authToken)
+        public QuandlQueryBuilder SetAuthToken(string authToken)
         {
             this.AuthToken = authToken;
             return this;
@@ -106,7 +106,7 @@ namespace Optivem.OpenData.Quandl
         /// <param name="trimStart">Represents the start date from which data should be retrieved</param>
         /// <param name="trimEnd">Represents the end date up to which data should be retrieved</param>
         /// <returns>The current builder instance</returns>
-        public QueryBuilder SetTrimRange(DateTime trimStart, DateTime trimEnd)
+        public QuandlQueryBuilder SetTrimRange(DateTime trimStart, DateTime trimEnd)
         {
             this.TrimStart = trimStart;
             this.TrimEnd = trimEnd;
@@ -118,7 +118,7 @@ namespace Optivem.OpenData.Quandl
         /// </summary>
         /// <param name="sortOrder">Represents the sort order</param>
         /// <returns>The current builder instance</returns>
-        public QueryBuilder SetSortOrder(SortOrder sortOrder)
+        public QuandlQueryBuilder SetSortOrder(SortOrder sortOrder)
         {
             this.SortOrder = sortOrder;
             return this;
@@ -129,7 +129,7 @@ namespace Optivem.OpenData.Quandl
         /// </summary>
         /// <param name="excludeHeader">Indicates that the header should be excluded</param>
         /// <returns>The current builder instance</returns>
-        public QueryBuilder SetExcludeHeader(bool excludeHeader)
+        public QuandlQueryBuilder SetExcludeHeader(bool excludeHeader)
         {
             this.ExcludeHeader = excludeHeader;
             return this;
@@ -140,7 +140,7 @@ namespace Optivem.OpenData.Quandl
         /// </summary>
         /// <param name="excludeData">Indicates that the data should be excluded</param>
         /// <returns>The current builder instance</returns>
-        public QueryBuilder SetExcludeData(bool excludeData)
+        public QuandlQueryBuilder SetExcludeData(bool excludeData)
         {
             this.ExcludeData = excludeData;
             return this;
@@ -151,7 +151,7 @@ namespace Optivem.OpenData.Quandl
         /// </summary>
         /// <param name="rows">Number of rows which should be retrieved</param>
         /// <returns>The current builder instance</returns>
-        public QueryBuilder SetRows(int? rows)
+        public QuandlQueryBuilder SetRows(int? rows)
         {
             this.Rows = rows;
             return this;
@@ -162,7 +162,7 @@ namespace Optivem.OpenData.Quandl
         /// </summary>
         /// <param name="column">Column number</param>
         /// <returns>The current builder instance</returns>
-        public QueryBuilder SetColumn(int? column)
+        public QuandlQueryBuilder SetColumn(int? column)
         {
             this.Column = column;
             return this;
@@ -173,7 +173,7 @@ namespace Optivem.OpenData.Quandl
         /// </summary>
         /// <param name="frequency">Collpase frequency</param>
         /// <returns>The current builder instance</returns>
-        public QueryBuilder SetFrequency(CollapseType frequency)
+        public QuandlQueryBuilder SetFrequency(CollapseType frequency)
         {
             this.Frequency = frequency;
             return this;
@@ -184,7 +184,7 @@ namespace Optivem.OpenData.Quandl
         /// </summary>
         /// <param name="calculation">Transformation type which should be applied</param>
         /// <returns>The current builder instance</returns>
-        public QueryBuilder SetCalculation(TransformationType calculation)
+        public QuandlQueryBuilder SetCalculation(TransformationType calculation)
         {
             this.Calculation = calculation;
             return this;

@@ -13,7 +13,7 @@ namespace Optivem.OpenData.Quandl.Test
             string tableCode = "bbb";
             FileType formatCode = FileType.CSV;
 
-            QueryBuilder queryBuilder = new QueryBuilder(databaseCode, tableCode, formatCode);
+            QuandlQueryBuilder queryBuilder = new QuandlQueryBuilder(databaseCode, tableCode, formatCode);
             Query actual = queryBuilder.ToQuery();
 
             Query expected = new Query(databaseCode, tableCode, formatCode, 

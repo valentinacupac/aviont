@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{331B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D1B4CE54-CC77-4A91-B11C-CFE57B10843B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Quandl", "Sources\Optivem.OpenData.Quandl\Optivem.OpenData.Quandl.csproj", "{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Providers.Quandl", "Sources\Optivem.OpenData.Providers.Quandl\Optivem.OpenData.Providers.Quandl.csproj", "{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Quandl.Test", "Tests\Optivem.OpenData.Quandl.Test\Optivem.OpenData.Quandl.Test.csproj", "{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Providers.Quandl.Test", "Tests\Optivem.OpenData.Providers.Quandl.Test\Optivem.OpenData.Providers.Quandl.Test.csproj", "{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Applications.Console", "Sources\Optivem.OpenData.Applications.Console\Optivem.OpenData.Applications.Console.csproj", "{9C413326-7E44-4584-B8BD-3464DB251F59}"
 EndProject
