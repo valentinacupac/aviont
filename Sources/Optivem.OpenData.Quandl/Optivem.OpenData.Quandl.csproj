@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="CollapseType.cs" />
     <Compile Include="FileType.cs" />
+    <Compile Include="QuandlQueryPathFactory.cs" />
     <Compile Include="Query.cs" />
     <Compile Include="QueryBuilder.cs" />
     <Compile Include="SortOrder.cs" />
@@ -48,9 +49,17 @@
     <Compile Include="Utilities\Converter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Optivem.Utilities">
+      <HintPath>..\..\Libraries\Optivem.Utilities.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Optivem.OpenData\Optivem.OpenData.csproj">
+      <Project>{3e92a0c4-9908-49ef-b0aa-6d73074ae47c}</Project>
+      <Name>Optivem.OpenData</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Connectors
+namespace Optivem.OpenData.Quandl
 {
     public class QuandlQueryPathFactory : BaseQueryPathFactory
     {
