@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Quandl.Console
+namespace Optivem.OpenData.Applications.Console
 {
     class Program
     {

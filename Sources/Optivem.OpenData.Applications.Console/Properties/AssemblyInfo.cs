@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Optivem.OpenData.Quandl.Console")]
+[assembly: AssemblyTitle("Optivem.OpenData.Applications.Console")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Optivem.OpenData.Quandl.Console")]
+[assembly: AssemblyProduct("Optivem.OpenData.Applications.Console")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2480213b-e6b1-4c20-a79e-50385e2e727c")]
+[assembly: Guid("4d1dfc08-a24c-4360-843b-3243b2521664")]
 
 // Version information for an assembly consists of the following four values:
 //
