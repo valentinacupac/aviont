@@ -44,8 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseQueryPathFactory.cs" />
-    <Compile Include="IQueryPathFactory.cs" />
+    <Compile Include="BaseQuerySerializer.cs" />
+    <Compile Include="BaseQueryStringMapSerializer.cs" />
+    <Compile Include="BaseQueryStringSerializer.cs" />
+    <Compile Include="IQuery.cs" />
+    <Compile Include="IQuerySerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryClient.cs" />
     <Compile Include="QueryParam.cs" />
     <Compile Include="QueryParamGroup.cs" />
   </ItemGroup>

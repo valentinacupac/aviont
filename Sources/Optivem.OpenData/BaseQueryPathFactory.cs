@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Optivem.OpenData
 {
-    public abstract class BaseQueryPathFactory : IQueryPathFactory
+    public abstract class BaseQueryPathFactory
     {
         public BaseQueryPathFactory(Parser parser, QueryParamGroup queryParamGroup)
         {
@@ -37,7 +37,7 @@ namespace Optivem.OpenData
                 string value = e.Value;
 
                 QueryParam queryParam = QueryParamGroup[key];
-                DataType dataType = queryParam.DataType;
+                Type dataType = queryParam.Type;
                 bool isNullable = queryParam.IsNullable;
 
                 object convertedValue = null;

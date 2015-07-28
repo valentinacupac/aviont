@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Quandl
+namespace Optivem.OpenData.Providers.Quandl
 {
     /// <summary>
     /// Represents elementary calculation which can be performed on data

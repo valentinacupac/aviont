@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Quandl
+namespace Optivem.OpenData.Providers.Quandl
 {
     /// <summary>
     /// Builder for Quandl queries (using fluent syntax)
@@ -194,9 +194,9 @@ namespace Optivem.OpenData.Quandl
         /// Constructs the query
         /// </summary>
         /// <returns>Query instance</returns>
-        public Query ToQuery()
+        public QuandlQuery ToQuery()
         {
-            return new Query(DatabaseCode, TableCode, FormatCode, AuthToken,
+            return new QuandlQuery(DatabaseCode, TableCode, FormatCode, AuthToken,
                 TrimStart, TrimEnd, SortOrder, ExcludeHeader, ExcludeData,
                 Rows, Column, Frequency, Calculation);
         }

@@ -35,17 +35,20 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="CollapseType.cs" />
     <Compile Include="FileType.cs" />
-    <Compile Include="QuandlQueryPathFactory.cs" />
-    <Compile Include="Query.cs" />
+    <Compile Include="QuandlQueryKeys.cs" />
+    <Compile Include="QuandlQueryObjectMapSerializer.cs" />
+    <Compile Include="QuandlQuery.cs" />
     <Compile Include="QuandlQueryBuilder.cs" />
+    <Compile Include="QuandlQueryParamGroup.cs" />
+    <Compile Include="QuandlQueryParser.cs" />
+    <Compile Include="QuandlQueryStringMapSerializer.cs" />
+    <Compile Include="QuandlQueryStringSerializer.cs" />
+    <Compile Include="QuandlTypes.cs" />
     <Compile Include="SortOrder.cs" />
     <Compile Include="TransformationType.cs" />
-    <Compile Include="Utilities\Converter.cs" />
+    <Compile Include="Utilities\QuandlUrlConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Optivem.Utilities">

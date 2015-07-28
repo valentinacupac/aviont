@@ -1,17 +1,37 @@
-﻿using System;
+﻿using Optivem.OpenData.Providers.Quandl.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Quandl
+namespace Optivem.OpenData.Providers.Quandl
 {
     /// <summary>
     /// Represents a Quandl Query which specifies paramters needed to retrieve data
     /// </summary>
-    public class Query
+    public class QuandlQuery : IQuery
     {
-        public Query(string databaseCode, string tableCode, FileType formatCode, 
+        private const string URL_BASE = "https://www.quandl.com/api/v1/datasets/{0}/{1}.{2}";
+        private const string URL_CONN = "?";
+        private const string URL_AND = "&";
+        private const string URL_ASSIGN = "=";
+
+        internal static class Keys
+        {
+            public const string AuthToken = "auth_token";
+            public const string TrimStart = "trim_start";
+            public const string TrimEnd = "trim_end";
+            public const string SortOrder = "sort_order";
+            public const string ExcludeHeaders = "exclude_headers";
+            public const string ExcludeData = "exclude_data";
+            public const string Rows = "rows";
+            public const string Column = "column";
+            public const string Collapse = "collapse";
+            public const string Transformation = "transformation";
+        }
+
+        public QuandlQuery(string databaseCode, string tableCode, FileType formatCode, 
             string authToken, DateTime? trimStart, DateTime? trimEnd, SortOrder sortOrder, 
             bool excludeHeader, bool excludeData, int? rows, int? column,
             CollapseType frequency, TransformationType calculation)
@@ -95,5 +115,72 @@ namespace Optivem.OpenData.Quandl
         /// Represents the transformation which can be applied to data set prior to downloading
         /// </summary>
         public TransformationType Calculation { get; private set; }
+
+        // TODO: Perhaps url creation is separate?
+        public string ToUrl()
+        {
+            string basePart = GetBaseUrl();
+            string queryPart = GetQueryUrl();
+
+            string combined = basePart;
+
+            if(queryPart.Length > 0)
+            {
+                combined = basePart + URL_CONN + queryPart;
+            }
+
+            return combined;
+        }
+
+        private string GetBaseUrl()
+        {
+            return string.Format(URL_BASE, DatabaseCode, TableCode, QuandlUrlConverter.ToString(FormatCode));
+        }
+
+        private string GetQueryUrl()
+        {
+            Dictionary<string, string> parts = new Dictionary<string, string>
+            {
+                { Keys.SortOrder, QuandlUrlConverter.ToString(SortOrder) },
+                { Keys.ExcludeHeaders, QuandlUrlConverter.ToString(ExcludeHeader) },
+                { Keys.ExcludeData, QuandlUrlConverter.ToString(ExcludeData) },
+                { Keys.Collapse, QuandlUrlConverter.ToString(Frequency) },
+                { Keys.Transformation, QuandlUrlConverter.ToString(Calculation) } 
+            };
+
+            if(AuthToken != null)
+            {
+                parts.Add(Keys.AuthToken, AuthToken);
+            }
+
+            if(TrimStart != null)
+            {
+                parts.Add(Keys.TrimStart, QuandlUrlConverter.ToString(TrimStart.Value));
+            }
+
+            if(TrimEnd != null)
+            {
+                parts.Add(Keys.TrimEnd, QuandlUrlConverter.ToString(TrimEnd.Value));
+            }
+
+            if(Rows != null)
+            {
+                parts.Add(Keys.Rows, QuandlUrlConverter.ToString(Rows.Value));
+            }
+
+            if(Column != null)
+            {
+                parts.Add(Keys.Column, QuandlUrlConverter.ToString(Column.Value));
+            }
+
+            List<string> elements = new List<string>();
+
+            foreach(KeyValuePair<string, string> entry in parts)
+            {
+                elements.Add(entry.Key + URL_ASSIGN + entry.Value);
+            }
+
+            return string.Join(URL_AND, elements);
+        }
     }
 }

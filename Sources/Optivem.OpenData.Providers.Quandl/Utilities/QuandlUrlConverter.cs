@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Quandl.Utilities
+namespace Optivem.OpenData.Providers.Quandl.Utilities
 {
     /// <summary>
     /// Utility conversion class of objects to strings for API calls
     /// </summary>
-    internal static class Converter
+    internal static class QuandlUrlConverter
     {
-        private const string _dateFormat = "yyyy-mm-dd";
+        private const string _dateFormat = "yyyy-MM-dd";
 
         private static Dictionary<FileType, string> _fileTypes = new Dictionary<FileType, string>
         {
@@ -92,6 +92,26 @@ namespace Optivem.OpenData.Quandl.Utilities
         public static string ToString(TransformationType transformationType)
         {
             return transformationTypes[transformationType];
+        }
+
+        /// <summary>
+        /// Converts boolean to string
+        /// </summary>
+        /// <param name="value">Boolean value to be converted</param>
+        /// <returns>Converted string</returns>
+        public static string ToString(bool value)
+        {
+            return value.ToString();
+        }
+
+        /// <summary>
+        /// Converts integer to string
+        /// </summary>
+        /// <param name="value">Integer to be converted</param>
+        /// <returns>Converted string</returns>
+        public static string ToString(int value)
+        {
+            return value.ToString();
         }
     }
 }
