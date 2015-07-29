@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7}</ProjectGuid>
+    <ProjectGuid>{F7AB9364-36E4-4E82-88BF-225346CB4337}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Optivem.OpenData.Providers.Quandl</RootNamespace>
-    <AssemblyName>Optivem.OpenData.Providers.Quandl</AssemblyName>
+    <RootNamespace>Optivem.OpenData.Infrastructure</RootNamespace>
+    <AssemblyName>Optivem.OpenData.Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,36 +29,20 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Enums\CollapseType.cs" />
-    <Compile Include="Enums\FileType.cs" />
-    <Compile Include="Enums\SortOrder.cs" />
-    <Compile Include="Enums\TransformationType.cs" />
-    <Compile Include="Queries\QuandlQuery.cs" />
-    <Compile Include="Queries\QuandlQueryBuilder.cs" />
-    <Compile Include="Queries\QuandlQueryKeys.cs" />
-    <Compile Include="Queries\QuandlQueryObjectMapSerializer.cs" />
-    <Compile Include="Queries\QuandlQueryParamGroup.cs" />
-    <Compile Include="Queries\QuandlQueryParser.cs" />
-    <Compile Include="Utilities\QuandlTypes.cs" />
-    <Compile Include="Utilities\QuandlUrlConverter.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Optivem.Utilities">
-      <HintPath>..\..\Libraries\Optivem.Utilities.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Optivem.OpenData\Optivem.OpenData.csproj">
-      <Project>{3e92a0c4-9908-49ef-b0aa-6d73074ae47c}</Project>
-      <Name>Optivem.OpenData</Name>
-    </ProjectReference>
+    <Compile Include="FieldSchema.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableSchema.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

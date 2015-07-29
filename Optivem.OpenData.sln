@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Providers.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Applications.Console", "Sources\Optivem.OpenData.Applications.Console\Optivem.OpenData.Applications.Console.csproj", "{9C413326-7E44-4584-B8BD-3464DB251F59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Infrastructure", "Sources\Optivem.OpenData.Infrastructure\Optivem.OpenData.Infrastructure.csproj", "{F7AB9364-36E4-4E82-88BF-225346CB4337}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{9C413326-7E44-4584-B8BD-3464DB251F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C413326-7E44-4584-B8BD-3464DB251F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C413326-7E44-4584-B8BD-3464DB251F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7AB9364-36E4-4E82-88BF-225346CB4337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7AB9364-36E4-4E82-88BF-225346CB4337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7AB9364-36E4-4E82-88BF-225346CB4337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7AB9364-36E4-4E82-88BF-225346CB4337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +66,6 @@ Global
 		{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
 		{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480} = {D1B4CE54-CC77-4A91-B11C-CFE57B10843B}
 		{9C413326-7E44-4584-B8BD-3464DB251F59} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
+		{F7AB9364-36E4-4E82-88BF-225346CB4337} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
 	EndGlobalSection
 EndGlobal
