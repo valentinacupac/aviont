@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseQueryObjectMapSerializer.cs" />
     <Compile Include="BaseQueryPathFactory.cs" />
     <Compile Include="BaseQuerySerializer.cs" />
     <Compile Include="BaseQueryStringMapSerializer.cs" />

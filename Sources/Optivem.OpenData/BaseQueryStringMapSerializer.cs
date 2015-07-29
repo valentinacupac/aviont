@@ -7,19 +7,34 @@ using System.Threading.Tasks;
 
 namespace Optivem.OpenData
 {
-    public abstract class BaseQueryStringMapSerializer : BaseQuerySerializer<Dictionary<string, string>>
+    public class BaseQueryStringMapSerializer : BaseQuerySerializer<Dictionary<string, string>>
     {
         // TODO: Parameter which indicates if key checking needs to occur, depending on whether source is trusted...
 
-        protected BaseQueryStringMapSerializer(QueryParamGroup paramGroup, Parser parser)
+        protected BaseQueryStringMapSerializer(QueryParamGroup paramGroup, Parser parser, 
+            IQuerySerializer<Dictionary<string, object>> objectMapSerializer)
             : base(paramGroup)
         {
             this.Parser = parser;
+            this.ObjectMapSerializer = objectMapSerializer;
         }
 
         public Parser Parser { get; private set; }
 
-        protected Dictionary<string, object> ToObjectMap(Dictionary<string, string> query)
+        public IQuerySerializer<Dictionary<string, object>> ObjectMapSerializer { get; private set; }
+
+        public override IQuery Deserialize(Dictionary<string, string> query)
+        {
+            Dictionary<string, object> map = ToObjectMap(query);
+            return ObjectMapSerializer.Deserialize(map);
+        }
+
+        public override Dictionary<string, string> Serialize(IQuery query)
+        {
+            throw new NotImplementedException();
+        }
+
+        private Dictionary<string, object> ToObjectMap(Dictionary<string, string> query)
         {
             Dictionary<string, object> map = new Dictionary<string, object>();
 
