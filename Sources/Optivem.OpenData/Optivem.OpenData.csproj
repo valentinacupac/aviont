@@ -46,8 +46,8 @@
     <Compile Include="BaseQueryObjectMapSerializer.cs" />
     <Compile Include="BaseQueryPathFactory.cs" />
     <Compile Include="BaseQuerySerializer.cs" />
-    <Compile Include="BaseQueryStringMapSerializer.cs" />
-    <Compile Include="BaseQueryStringSerializer.cs" />
+    <Compile Include="QueryStringMapSerializer.cs" />
+    <Compile Include="QueryStringSerializer.cs" />
     <Compile Include="IQuery.cs" />
     <Compile Include="IQuerySerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
