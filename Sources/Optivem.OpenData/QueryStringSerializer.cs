@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Optivem.OpenData
 {
-    public abstract class BaseQueryStringSerializer : BaseQuerySerializer<string>
+    public class QueryStringSerializer : BaseQuerySerializer<string>
     {
         private const int indexKey = 0;
         private const int indexValue = 1;
@@ -16,9 +16,10 @@ namespace Optivem.OpenData
         private string[] fieldSeparatorArray;
         private string[] valueSeparatorArray;
 
-        protected BaseQueryStringSerializer(QueryParamGroup paramGroup, string fieldSeparator, string valueSeparator, StringSplitOptions splitOptions, string[] nullStrings)
+        public QueryStringSerializer(QueryParamGroup paramGroup, IQuerySerializer<Dictionary<string, string>> stringMapSerializer, string fieldSeparator, string valueSeparator, StringSplitOptions splitOptions, string[] nullStrings)
             : base(paramGroup)
         {
+            this.StringMapSerializer = stringMapSerializer;
             this.FieldSeparator = fieldSeparator;
             this.ValueSeparator = valueSeparator;
             this.SplitOptions = splitOptions;
@@ -28,6 +29,8 @@ namespace Optivem.OpenData
             this.valueSeparatorArray = new [] { valueSeparator };
         }
 
+        public IQuerySerializer<Dictionary<string, string>> StringMapSerializer { get; private set; }
+
         public string FieldSeparator { get; private set; }
 
         public string ValueSeparator { get; private set; }
@@ -36,7 +39,18 @@ namespace Optivem.OpenData
 
         public string[] NullStrings { get; private set; }
 
-        protected Dictionary<string, string> ToStringMap(string query)
+        public override IQuery Deserialize(string query)
+        {
+            Dictionary<string, string> stringMap = ToStringMap(query);
+            return StringMapSerializer.Deserialize(stringMap);
+        }
+
+        public override string Serialize(IQuery query)
+        {
+            throw new NotImplementedException();
+        }
+
+        private Dictionary<string, string> ToStringMap(string query)
         {
             string[] queryFields = query.Split(fieldSeparatorArray, SplitOptions);
 
@@ -79,5 +93,7 @@ namespace Optivem.OpenData
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

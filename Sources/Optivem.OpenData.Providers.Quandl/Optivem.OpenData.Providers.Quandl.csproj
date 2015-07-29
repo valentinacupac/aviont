@@ -43,8 +43,6 @@
     <Compile Include="QuandlQueryBuilder.cs" />
     <Compile Include="QuandlQueryParamGroup.cs" />
     <Compile Include="QuandlQueryParser.cs" />
-    <Compile Include="QuandlQueryStringMapSerializer.cs" />
-    <Compile Include="QuandlQueryStringSerializer.cs" />
     <Compile Include="QuandlTypes.cs" />
     <Compile Include="SortOrder.cs" />
     <Compile Include="TransformationType.cs" />

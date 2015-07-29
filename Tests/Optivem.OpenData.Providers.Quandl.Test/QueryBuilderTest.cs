@@ -44,20 +44,22 @@ namespace Optivem.OpenData.Providers.Quandl.Test
             Parser parser = QuandlQueryParser.Parser;
 
 
-            QuandlQueryObjectMapSerializer objectMapSerializer = new QuandlQueryObjectMapSerializer();
+            IQuerySerializer<Dictionary<string, object>> objectMapSerializer = new QuandlQueryObjectMapSerializer();
 
-            QuandlQueryStringMapSerializer stringMapSerializer = new QuandlQueryStringMapSerializer(queryParamGroup, parser, objectMapSerializer);
+            QueryStringMapSerializer stringMapSerializer = new QueryStringMapSerializer(queryParamGroup, parser, objectMapSerializer);
+            
             string fieldSeparator = ",";
             string valueSeparator = ":";
             StringSplitOptions splitOptions = StringSplitOptions.RemoveEmptyEntries;
             string[] nullStrings = new string[] { "NULL" };
             
-            QuandlQueryStringSerializer stringSerializer = new QuandlQueryStringSerializer(queryParamGroup, fieldSeparator, valueSeparator, splitOptions, nullStrings, stringMapSerializer);
+            QueryStringSerializer stringSerializer = new QueryStringSerializer(queryParamGroup, stringMapSerializer, fieldSeparator, valueSeparator, splitOptions, nullStrings);
 
             string input = "DatabaseCode:WIKI,TableCode:AAPL,FormatCode:CSV,AuthToken:NULL,TrimStart:2012-11-01,TrimEnd:2013-11-30,SortOrder:Ascending,ExcludeHeader:true,ExcludeData:NULL,Rows:3,Column:4,Frequency:Quarterly,Calculation:rdiff";
 
             IQuery query = stringSerializer.Deserialize(input);
             string url = query.ToUrl();
+
 
             // TODO: Also add conversion from ready-made url into an actual object, which means if user had already done query, that he/she
             // can also save that query directly, and it will be converted into some internal representation
@@ -72,17 +74,8 @@ namespace Optivem.OpenData.Providers.Quandl.Test
 
             Assert.AreEqual(expectedResults, actualResults);
 
-            /*
-            string databaseCode, string tableCode, FileType formatCode, 
-            string authToken, DateTime? trimStart, DateTime? trimEnd, SortOrder sortOrder, 
-            bool excludeHeader, bool excludeData, int? rows, int? column,
-            CollapseType frequency, TransformationType calculation
-            */
 
-
-            /*
-            https://www.quandl.com/api/v1/datasets/WIKI/AAPL.csv?sort_order=asc&exclude_headers=true&rows=3&trim_start=2012-11-01&trim_end=2013-11-30&column=4&collapse=quarterly&transformation=rdiff
-            */
+            // https://www.quandl.com/api/v1/datasets/WIKI/AAPL.csv?sort_order=asc&exclude_headers=true&rows=3&trim_start=2012-11-01&trim_end=2013-11-30&column=4&collapse=quarterly&transformation=rdiff
         }
 
         private static void AreEqual(QuandlQuery expected, QuandlQuery actual)

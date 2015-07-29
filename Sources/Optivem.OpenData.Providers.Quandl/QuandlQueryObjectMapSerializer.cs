@@ -9,8 +9,6 @@ namespace Optivem.OpenData.Providers.Quandl
 {
     public class QuandlQueryObjectMapSerializer : BaseQueryObjectMapSerializer
     {
-
-
         public override IQuery Deserialize(Dictionary<string, object> query)
         {
             string databaseCode = (string)query[QuandlQueryKeys.DatabaseCode];
@@ -35,7 +33,5 @@ namespace Optivem.OpenData.Providers.Quandl
         {
             throw new NotImplementedException();
         }
-
-
     }
 }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Optivem.OpenData
 {
-    public class BaseQueryStringMapSerializer : BaseQuerySerializer<Dictionary<string, string>>
+    public class QueryStringMapSerializer : BaseQuerySerializer<Dictionary<string, string>>
     {
         // TODO: Parameter which indicates if key checking needs to occur, depending on whether source is trusted...
 
-        protected BaseQueryStringMapSerializer(QueryParamGroup paramGroup, Parser parser, 
+        public QueryStringMapSerializer(QueryParamGroup paramGroup, Parser parser, 
             IQuerySerializer<Dictionary<string, object>> objectMapSerializer)
             : base(paramGroup)
         {
