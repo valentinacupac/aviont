@@ -8,6 +8,9 @@ The purpose of this project is to enable easy access to various OpenData sources
 Supported providers:
 * Quandl Financial & Economics OpenData
 
+# Documentation
+Documentation for users and developers is being updated on the [Optivem OpenData Wiki](../../wiki) page.
+
 # Licence
 
 This project is licenced under the Apache License Version 2.0, which means it can be freely redistributed / modified / used in both commercial and non-commercial projects.
