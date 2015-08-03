@@ -1,16 +1,17 @@
 # Optivem OpenData (C#)
 
-The purpose of this project is to enable easy access to various OpenData sources.
-* Enable connecting to various OpenData providers [in-progress: Milestone 1]
-* Provide a console interface for command line users to organize downloads [pending: Milestone 2]
-* Provide an easy-to-use GUI application to organize downloaded files [pending: Milestone 3]
+The purpose of this project is to enable easy access to various OpenData sources, providing both command line and Windows GUI access. Data is retrieved from Quandl (Financial & Economics OpenData).
 
-Supported providers:
-* Quandl Financial & Economics OpenData
+## Pages
 
-# Documentation
-Documentation for users and developers is being updated on the [Optivem OpenData Wiki](../../wiki) page.
+* [Wiki](../../wiki) - Contains documentation for users and developers
+* [Milestones](../../milestones) - Shows the project milestones
+* [Issues](../../issues) - Allows you to report issues for this project
 
-# Licence
+## Licence
 
 This project is licenced under the Apache License Version 2.0, which means it can be freely redistributed / modified / used in both commercial and non-commercial projects.
+
+## Contact
+
+Any questions or comments can be sent to valentina.cupac [at] optivem [dot] com.
