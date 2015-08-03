@@ -2,13 +2,13 @@
 
 The purpose of this project is to enable easy access to various OpenData sources, providing both command line and Windows GUI access. Data is retrieved from Quandl (Financial & Economics OpenData).
 
-## Pages
+## Documentation
 
-Page | Description
---- | ---
-[Wiki](../../wiki) | Contains documentation for users and developers
-[Milestones](../../milestones) | Shows the project milestones
-[Issues](../../issues) | Allows you to report issues for this project
+Project documentation is accessible via the [Wiki](../../wiki) page.
+
+## Issues
+
+Issues can be reported via the [Issues](../../issues) page.
 
 ## Licence
 
