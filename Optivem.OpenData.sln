@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData", "Sources\Optivem.OpenData\Optivem.OpenData.csproj", "{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Domain", "Sources\Optivem.OpenData.Domain\Optivem.OpenData.Domain.csproj", "{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Applications.Windows", "Sources\Optivem.OpenData.Applications.Windows\Optivem.OpenData.Applications.Windows.csproj", "{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Presentation.Windows", "Sources\Optivem.OpenData.Presentation.Windows\Optivem.OpenData.Presentation.Windows.csproj", "{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Test", "Tests\Optivem.OpenData.Test\Optivem.OpenData.Test.csproj", "{32DC66C6-2F85-4CFD-A8E0-597890833147}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Domain.Tests", "Tests\Optivem.OpenData.Domain.Tests\Optivem.OpenData.Domain.Tests.csproj", "{32DC66C6-2F85-4CFD-A8E0-597890833147}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{331B0746-1603-4614-A2AB-65B27BF6E62F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D1B4CE54-CC77-4A91-B11C-CFE57B10843B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Providers.Quandl", "Sources\Optivem.OpenData.Providers.Quandl\Optivem.OpenData.Providers.Quandl.csproj", "{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Domain.Providers.Quandl", "Sources\Optivem.OpenData.Domain.Providers.Quandl\Optivem.OpenData.Domain.Providers.Quandl.csproj", "{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Providers.Quandl.Test", "Tests\Optivem.OpenData.Providers.Quandl.Test\Optivem.OpenData.Providers.Quandl.Test.csproj", "{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Domain.Providers.Quandl.Tests", "Tests\Optivem.OpenData.Domain.Providers.Quandl.Tests\Optivem.OpenData.Domain.Providers.Quandl.Tests.csproj", "{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Applications.Console", "Sources\Optivem.OpenData.Applications.Console\Optivem.OpenData.Applications.Console.csproj", "{9C413326-7E44-4584-B8BD-3464DB251F59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Presentation.Console", "Sources\Optivem.OpenData.Presentation.Console\Optivem.OpenData.Presentation.Console.csproj", "{9C413326-7E44-4584-B8BD-3464DB251F59}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Infrastructure", "Sources\Optivem.OpenData.Infrastructure\Optivem.OpenData.Infrastructure.csproj", "{F7AB9364-36E4-4E82-88BF-225346CB4337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Application", "Sources\Optivem.OpenData.Application\Optivem.OpenData.Application.csproj", "{3349F2A5-6A5C-48BF-A1B9-752F92B557DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{F7AB9364-36E4-4E82-88BF-225346CB4337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7AB9364-36E4-4E82-88BF-225346CB4337}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7AB9364-36E4-4E82-88BF-225346CB4337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3349F2A5-6A5C-48BF-A1B9-752F92B557DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3349F2A5-6A5C-48BF-A1B9-752F92B557DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3349F2A5-6A5C-48BF-A1B9-752F92B557DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3349F2A5-6A5C-48BF-A1B9-752F92B557DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,5 +73,6 @@ Global
 		{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480} = {D1B4CE54-CC77-4A91-B11C-CFE57B10843B}
 		{9C413326-7E44-4584-B8BD-3464DB251F59} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
 		{F7AB9364-36E4-4E82-88BF-225346CB4337} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
+		{3349F2A5-6A5C-48BF-A1B9-752F92B557DF} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
 	EndGlobalSection
 EndGlobal
