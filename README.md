@@ -4,9 +4,11 @@ The purpose of this project is to enable easy access to various OpenData sources
 
 ## Pages
 
-* [Wiki](../../wiki) - Contains documentation for users and developers
-* [Milestones](../../milestones) - Shows the project milestones
-* [Issues](../../issues) - Allows you to report issues for this project
+Page | Description
+--- | ---
+[Wiki](../../wiki) | Contains documentation for users and developers
+[Milestones](../../milestones) | Shows the project milestones
+[Issues](../../issues) | Allows you to report issues for this project
 
 ## Licence
 
