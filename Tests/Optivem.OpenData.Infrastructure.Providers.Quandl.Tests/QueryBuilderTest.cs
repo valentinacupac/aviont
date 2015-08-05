@@ -3,9 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Optivem.Utilities;
 using System.Collections.Generic;
 using Optivem.OpenData.Domain;
-using Optivem.OpenData.Domain.Providers.Quandl;
+using Optivem.OpenData.Infrastructure.Providers.Quandl;
 
-namespace Optivem.OpenData.Domain.Providers.Quandl.Tests
+namespace Optivem.OpenData.Infrastructure.Providers.Quandl.Tests
 {
     [TestClass]
     public class QueryBuilderTest

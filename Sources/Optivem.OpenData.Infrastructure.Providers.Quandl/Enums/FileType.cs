@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Domain.Providers.Quandl
+namespace Optivem.OpenData.Infrastructure.Providers.Quandl
 {
     /// <summary>
     /// Represents the format code of file

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Domain.Providers.Quandl
+namespace Optivem.OpenData.Infrastructure.Providers.Quandl
 {
     /// <summary>
     /// Utility conversion class of objects to strings for API calls

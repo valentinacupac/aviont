@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Domain.Providers.Quandl
+namespace Optivem.OpenData.Infrastructure.Providers.Quandl
 {
     public static class QuandlQueryParser
     {

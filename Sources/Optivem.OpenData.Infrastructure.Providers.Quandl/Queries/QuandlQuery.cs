@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Domain.Providers.Quandl
+namespace Optivem.OpenData.Infrastructure.Providers.Quandl
 {
     /// <summary>
     /// Represents a Quandl Query which specifies paramters needed to retrieve data

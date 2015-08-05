@@ -6,8 +6,8 @@
     <ProjectGuid>{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Optivem.OpenData.Domain.Providers.Quandl.Tests</RootNamespace>
-    <AssemblyName>Optivem.OpenData.Domain.Providers.Quandl.Tests</AssemblyName>
+    <RootNamespace>Optivem.OpenData.Infrastructure.Providers.Quandl.Tests</RootNamespace>
+    <AssemblyName>Optivem.OpenData.Infrastructure.Providers.Quandl.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -58,7 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Sources\Optivem.OpenData.Domain.Providers.Quandl\Optivem.OpenData.Domain.Providers.Quandl.csproj">
+    <ProjectReference Include="..\..\Sources\Optivem.OpenData.Infrastructure.Providers.Quandl\Optivem.OpenData.Infrastructure.Providers.Quandl.csproj">
       <Project>{bf4c1359-5dd0-4bc6-8284-19a4b89cd2a7}</Project>
       <Name>Optivem.OpenData.Quandl</Name>
     </ProjectReference>

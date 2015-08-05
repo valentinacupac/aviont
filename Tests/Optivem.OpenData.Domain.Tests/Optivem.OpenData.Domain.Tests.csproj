@@ -53,7 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Sources\Optivem.OpenData.Domain.Providers.Quandl\Optivem.OpenData.Domain.Providers.Quandl.csproj">
+    <ProjectReference Include="..\..\Sources\Optivem.OpenData.Infrastructure.Providers.Quandl\Optivem.OpenData.Infrastructure.Providers.Quandl.csproj">
       <Project>{bf4c1359-5dd0-4bc6-8284-19a4b89cd2a7}</Project>
       <Name>Optivem.OpenData.Quandl</Name>
     </ProjectReference>

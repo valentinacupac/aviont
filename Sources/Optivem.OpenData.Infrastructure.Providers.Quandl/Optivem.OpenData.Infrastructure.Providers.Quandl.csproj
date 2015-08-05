@@ -7,8 +7,8 @@
     <ProjectGuid>{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Optivem.OpenData.Domain.Providers.Quandl</RootNamespace>
-    <AssemblyName>Optivem.OpenData.Domain.Providers.Quandl</AssemblyName>
+    <RootNamespace>Optivem.OpenData.Infrastructure.Providers.Quandl</RootNamespace>
+    <AssemblyName>Optivem.OpenData.Infrastructure.Providers.Quandl</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
