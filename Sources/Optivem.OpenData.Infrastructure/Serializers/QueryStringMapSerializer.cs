@@ -1,17 +1,18 @@
-﻿using Optivem.Utilities;
+﻿using Optivem.OpenData.Domain;
+using Optivem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Domain
+namespace Optivem.OpenData.Infrastructure
 {
     public class QueryStringMapSerializer : BaseQuerySerializer<Dictionary<string, string>>
     {
         // TODO: Parameter which indicates if key checking needs to occur, depending on whether source is trusted...
 
-        public QueryStringMapSerializer(QueryParamGroup paramGroup, Parser parser, 
+        public QueryStringMapSerializer(DataQuery paramGroup, Parser parser, 
             IQuerySerializer<Dictionary<string, object>> objectMapSerializer)
             : base(paramGroup)
         {

@@ -10,7 +10,7 @@ namespace Optivem.OpenData.Infrastructure.Providers.Quandl
 {
     public static class QuandlQueryParamGroup
     {
-        public static QueryParamGroup QueryParamGroup = new QueryParamGroup(new List<DataField>
+        public static DataQuery QueryParamGroup = new DataQuery(new List<DataField>
         {
             new DataField(QuandlQueryKeys.DatabaseCode, CommonTypes.String),
             new DataField(QuandlQueryKeys.TableCode, CommonTypes.String),

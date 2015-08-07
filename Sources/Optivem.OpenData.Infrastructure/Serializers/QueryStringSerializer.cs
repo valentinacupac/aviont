@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Optivem.OpenData.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Domain
+namespace Optivem.OpenData.Infrastructure
 {
     public class QueryStringSerializer : BaseQuerySerializer<string>
     {
@@ -16,7 +17,7 @@ namespace Optivem.OpenData.Domain
         private string[] fieldSeparatorArray;
         private string[] valueSeparatorArray;
 
-        public QueryStringSerializer(QueryParamGroup paramGroup, IQuerySerializer<Dictionary<string, string>> stringMapSerializer, string fieldSeparator, string valueSeparator, StringSplitOptions splitOptions, string[] nullStrings)
+        public QueryStringSerializer(DataQuery paramGroup, IQuerySerializer<Dictionary<string, string>> stringMapSerializer, string fieldSeparator, string valueSeparator, StringSplitOptions splitOptions, string[] nullStrings)
             : base(paramGroup)
         {
             this.StringMapSerializer = stringMapSerializer;

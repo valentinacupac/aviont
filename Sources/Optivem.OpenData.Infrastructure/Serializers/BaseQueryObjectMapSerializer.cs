@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Domain
+namespace Optivem.OpenData.Infrastructure
 {
     public abstract class BaseQueryObjectMapSerializer : IQuerySerializer<Dictionary<string, object>>
     {

@@ -11,6 +11,14 @@ namespace Optivem.OpenData.Domain
     /// </summary>
     public class DataRequest
     {
+        public DataRequest(DataPath path, DataQuery query)
+        {
+            this.Path = path;
+            this.Query = query;
+        }
 
+        public DataPath Path { get; private set; }
+
+        public DataQuery Query { get; private set; }
     }
 }

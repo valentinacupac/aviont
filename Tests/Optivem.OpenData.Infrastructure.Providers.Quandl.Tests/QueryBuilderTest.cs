@@ -42,7 +42,7 @@ namespace Optivem.OpenData.Infrastructure.Providers.Quandl.Tests
 
             string expectedResults = string.Join("\n", lines) + "\n";
 
-            QueryParamGroup queryParamGroup = QuandlQueryParamGroup.QueryParamGroup;
+            DataQuery queryParamGroup = QuandlQueryParamGroup.QueryParamGroup;
             Parser parser = QuandlQueryParser.Parser;
 
 

@@ -1,19 +1,20 @@
-﻿using System;
+﻿using Optivem.OpenData.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Domain
+namespace Optivem.OpenData.Infrastructure
 {
     public abstract class BaseQuerySerializer<T> : IQuerySerializer<T>
     {
-        protected BaseQuerySerializer(QueryParamGroup queryParamGroup)
+        protected BaseQuerySerializer(DataQuery queryParamGroup)
         {
             this.QueryParamGroup = queryParamGroup;
         }
 
-        public QueryParamGroup QueryParamGroup { get; private set; }
+        public DataQuery QueryParamGroup { get; private set; }
 
         public abstract IQuery Deserialize(T query);
 

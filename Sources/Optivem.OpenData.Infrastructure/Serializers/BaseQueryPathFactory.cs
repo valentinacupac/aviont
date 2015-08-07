@@ -1,15 +1,16 @@
-﻿using Optivem.Utilities;
+﻿using Optivem.OpenData.Domain;
+using Optivem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Domain
+namespace Optivem.OpenData.Infrastructure
 {
     public abstract class BaseQueryPathFactory
     {
-        public BaseQueryPathFactory(Parser parser, QueryParamGroup queryParamGroup)
+        public BaseQueryPathFactory(Parser parser, DataQuery queryParamGroup)
         {
             this.Parser = parser;
             this.QueryParamGroup = queryParamGroup;
@@ -17,7 +18,7 @@ namespace Optivem.OpenData.Domain
 
         public Parser Parser { get; private set; }
 
-        public QueryParamGroup QueryParamGroup { get; private set; }
+        public DataQuery QueryParamGroup { get; private set; }
 
         public string Create(Dictionary<string, string> data)
         {

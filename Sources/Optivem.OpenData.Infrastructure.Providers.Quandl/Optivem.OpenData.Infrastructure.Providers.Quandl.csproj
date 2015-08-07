@@ -59,6 +59,10 @@
       <Project>{3e92a0c4-9908-49ef-b0aa-6d73074ae47c}</Project>
       <Name>Optivem.OpenData</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Optivem.OpenData.Infrastructure\Optivem.OpenData.Infrastructure.csproj">
+      <Project>{f7ab9364-36e4-4e82-88bf-225346cb4337}</Project>
+      <Name>Optivem.OpenData.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
