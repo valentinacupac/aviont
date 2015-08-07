@@ -36,7 +36,7 @@ namespace Optivem.OpenData.Domain
                 string key = e.Key;
                 string value = e.Value;
 
-                QueryParam queryParam = QueryParamGroup[key];
+                DataField queryParam = QueryParamGroup[key];
                 Type dataType = queryParam.Type;
                 bool isNullable = queryParam.IsNullable;
 

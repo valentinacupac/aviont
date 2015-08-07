@@ -10,21 +10,21 @@ namespace Optivem.OpenData.Infrastructure.Providers.Quandl
 {
     public static class QuandlQueryParamGroup
     {
-        public static QueryParamGroup QueryParamGroup = new QueryParamGroup(new List<QueryParam>
+        public static QueryParamGroup QueryParamGroup = new QueryParamGroup(new List<DataField>
         {
-            new QueryParam(QuandlQueryKeys.DatabaseCode, CommonTypes.String),
-            new QueryParam(QuandlQueryKeys.TableCode, CommonTypes.String),
-            new QueryParam(QuandlQueryKeys.FormatCode, typeof(FileType)),
-            new QueryParam(QuandlQueryKeys.AuthToken, CommonTypes.String, true),
-            new QueryParam(QuandlQueryKeys.TrimStart, CommonTypes.DateTime, true),
-            new QueryParam(QuandlQueryKeys.TrimEnd, CommonTypes.DateTime, true),
-            new QueryParam(QuandlQueryKeys.SortOrder, typeof(SortOrder), true),
-            new QueryParam(QuandlQueryKeys.ExcludeHeader, CommonTypes.Bool, true),
-            new QueryParam(QuandlQueryKeys.ExcludeData, CommonTypes.Bool, true),
-            new QueryParam(QuandlQueryKeys.Rows, CommonTypes.Int, true),
-            new QueryParam(QuandlQueryKeys.Column, CommonTypes.Int, true),
-            new QueryParam(QuandlQueryKeys.Frequency, typeof(CollapseType), true),
-            new QueryParam(QuandlQueryKeys.Calculation, typeof(TransformationType), true),
+            new DataField(QuandlQueryKeys.DatabaseCode, CommonTypes.String),
+            new DataField(QuandlQueryKeys.TableCode, CommonTypes.String),
+            new DataField(QuandlQueryKeys.FormatCode, typeof(FileType)),
+            new DataField(QuandlQueryKeys.AuthToken, CommonTypes.String, true),
+            new DataField(QuandlQueryKeys.TrimStart, CommonTypes.DateTime, true),
+            new DataField(QuandlQueryKeys.TrimEnd, CommonTypes.DateTime, true),
+            new DataField(QuandlQueryKeys.SortOrder, typeof(SortOrder), true),
+            new DataField(QuandlQueryKeys.ExcludeHeader, CommonTypes.Bool, true),
+            new DataField(QuandlQueryKeys.ExcludeData, CommonTypes.Bool, true),
+            new DataField(QuandlQueryKeys.Rows, CommonTypes.Int, true),
+            new DataField(QuandlQueryKeys.Column, CommonTypes.Int, true),
+            new DataField(QuandlQueryKeys.Frequency, typeof(CollapseType), true),
+            new DataField(QuandlQueryKeys.Calculation, typeof(TransformationType), true),
         });
     }
 }

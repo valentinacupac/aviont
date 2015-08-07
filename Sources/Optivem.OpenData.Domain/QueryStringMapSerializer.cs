@@ -52,7 +52,7 @@ namespace Optivem.OpenData.Domain
                     throw new ArgumentException("Parameter key occurs multiple times: " + key);
                 }
 
-                QueryParam param = QueryParamGroup[key];
+                DataField param = QueryParamGroup[key];
 
                 string stringValue = entry.Value;
                 object objectValue = null;

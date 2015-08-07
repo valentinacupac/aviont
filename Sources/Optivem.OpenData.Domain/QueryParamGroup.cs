@@ -9,15 +9,15 @@ namespace Optivem.OpenData.Domain
     /// <summary>
     /// Represents a group of related query parameters
     /// </summary>
-    public class QueryParamGroup : IEnumerable<QueryParam>
+    public class QueryParamGroup : IEnumerable<DataField>
     {
-        private Dictionary<string, QueryParam> queryParams;
+        private Dictionary<string, DataField> queryParams;
 
         /// <summary>
         /// Constructs a query parameter group
         /// </summary>
         /// <param name="queryParams">Series of query parameters</param>
-        public QueryParamGroup(IEnumerable<QueryParam> queryParams)
+        public QueryParamGroup(IEnumerable<DataField> queryParams)
         {
             this.queryParams = queryParams.ToDictionary(e => e.Key, e => e);
         }
@@ -27,7 +27,7 @@ namespace Optivem.OpenData.Domain
         /// </summary>
         /// <param name="key">Key to retrieve the query parameter</param>
         /// <returns>Query parameter</returns>
-        public QueryParam Get(string key)
+        public DataField Get(string key)
         {
             return queryParams[key];
         }
@@ -47,7 +47,7 @@ namespace Optivem.OpenData.Domain
         /// </summary>
         /// <param name="key">Key to retrieve the query parameter</param>
         /// <returns>Query parameter</returns>
-        public QueryParam this[string key]
+        public DataField this[string key]
         {
             get
             {
@@ -55,7 +55,7 @@ namespace Optivem.OpenData.Domain
             }
         }
 
-        public IEnumerator<QueryParam> GetEnumerator()
+        public IEnumerator<DataField> GetEnumerator()
         {
             return queryParams.Values.GetEnumerator();
         }

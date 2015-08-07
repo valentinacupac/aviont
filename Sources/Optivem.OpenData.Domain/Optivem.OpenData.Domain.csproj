@@ -46,13 +46,25 @@
     <Compile Include="BaseQueryObjectMapSerializer.cs" />
     <Compile Include="BaseQueryPathFactory.cs" />
     <Compile Include="BaseQuerySerializer.cs" />
+    <Compile Include="DataField.cs" />
+    <Compile Include="DataInfo.cs" />
+    <Compile Include="DataPath.cs" />
+    <Compile Include="DataQuery.cs" />
+    <Compile Include="DataRequest.cs" />
+    <Compile Include="DataResponse.cs" />
+    <Compile Include="DataSet.cs" />
+    <Compile Include="IDataPathSerializer.cs" />
+    <Compile Include="IDataQuerySerializer.cs" />
+    <Compile Include="IDataRequestSerializer.cs" />
+    <Compile Include="IDataResponseReader.cs" />
+    <Compile Include="IDataSetReader.cs" />
+    <Compile Include="IDataSetWriter.cs" />
     <Compile Include="QueryStringMapSerializer.cs" />
     <Compile Include="QueryStringSerializer.cs" />
     <Compile Include="IQuery.cs" />
     <Compile Include="IQuerySerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryClient.cs" />
-    <Compile Include="QueryParam.cs" />
     <Compile Include="QueryParamGroup.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
