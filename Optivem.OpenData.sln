@@ -3,25 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Domain", "Sources\Optivem.OpenData.Domain\Optivem.OpenData.Domain.csproj", "{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Domain", "Sources\Domain\Optivem.OpenData.Domain\Optivem.OpenData.Domain.csproj", "{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Presentation.Windows", "Sources\Optivem.OpenData.Presentation.Windows\Optivem.OpenData.Presentation.Windows.csproj", "{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Domain.Tests", "Tests\Optivem.OpenData.Domain.Tests\Optivem.OpenData.Domain.Tests.csproj", "{32DC66C6-2F85-4CFD-A8E0-597890833147}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Domain.Tests", "Tests\Domain\Optivem.OpenData.Domain.Tests\Optivem.OpenData.Domain.Tests.csproj", "{32DC66C6-2F85-4CFD-A8E0-597890833147}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{331B0746-1603-4614-A2AB-65B27BF6E62F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D1B4CE54-CC77-4A91-B11C-CFE57B10843B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Infrastructure.Providers.Quandl", "Sources\Optivem.OpenData.Infrastructure.Providers.Quandl\Optivem.OpenData.Infrastructure.Providers.Quandl.csproj", "{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Infrastructure.Providers.Quandl", "Sources\Infrastructure\Optivem.OpenData.Infrastructure.Providers.Quandl\Optivem.OpenData.Infrastructure.Providers.Quandl.csproj", "{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Infrastructure.Providers.Quandl.Tests", "Tests\Optivem.OpenData.Infrastructure.Providers.Quandl.Tests\Optivem.OpenData.Infrastructure.Providers.Quandl.Tests.csproj", "{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Infrastructure.Providers.Quandl.Tests", "Tests\Infrastructure\Optivem.OpenData.Infrastructure.Providers.Quandl.Tests\Optivem.OpenData.Infrastructure.Providers.Quandl.Tests.csproj", "{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Presentation.Console", "Sources\Optivem.OpenData.Presentation.Console\Optivem.OpenData.Presentation.Console.csproj", "{9C413326-7E44-4584-B8BD-3464DB251F59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Presentation.Console", "Sources\Presentation\Optivem.OpenData.Presentation.Console\Optivem.OpenData.Presentation.Console.csproj", "{9C413326-7E44-4584-B8BD-3464DB251F59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Infrastructure", "Sources\Optivem.OpenData.Infrastructure\Optivem.OpenData.Infrastructure.csproj", "{F7AB9364-36E4-4E82-88BF-225346CB4337}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Infrastructure", "Sources\Infrastructure\Optivem.OpenData.Infrastructure\Optivem.OpenData.Infrastructure.csproj", "{F7AB9364-36E4-4E82-88BF-225346CB4337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Application", "Sources\Optivem.OpenData.Application\Optivem.OpenData.Application.csproj", "{3349F2A5-6A5C-48BF-A1B9-752F92B557DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Application", "Sources\Application\Optivem.OpenData.Application\Optivem.OpenData.Application.csproj", "{3349F2A5-6A5C-48BF-A1B9-752F92B557DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{C25C53D1-C70C-4270-9C68-EFF63F61D0E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{21938CAB-B688-4B41-BF87-F8D95130C38E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{14F7BE93-E5B1-45CF-B034-5202C741181C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{688C99D6-FD9E-428C-9041-0626A4A2E925}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{8D5ECC49-7DFD-4B7A-B19C-E16F1371EF83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{FA295C9A-9514-4928-9EAF-520C807E3D75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,13 +78,19 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3E92A0C4-9908-49EF-B0AA-6D73074AE47C} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
-		{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
-		{32DC66C6-2F85-4CFD-A8E0-597890833147} = {D1B4CE54-CC77-4A91-B11C-CFE57B10843B}
-		{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
-		{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480} = {D1B4CE54-CC77-4A91-B11C-CFE57B10843B}
-		{9C413326-7E44-4584-B8BD-3464DB251F59} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
-		{F7AB9364-36E4-4E82-88BF-225346CB4337} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
-		{3349F2A5-6A5C-48BF-A1B9-752F92B557DF} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
+		{3E92A0C4-9908-49EF-B0AA-6D73074AE47C} = {21938CAB-B688-4B41-BF87-F8D95130C38E}
+		{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C} = {688C99D6-FD9E-428C-9041-0626A4A2E925}
+		{32DC66C6-2F85-4CFD-A8E0-597890833147} = {8D5ECC49-7DFD-4B7A-B19C-E16F1371EF83}
+		{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7} = {14F7BE93-E5B1-45CF-B034-5202C741181C}
+		{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480} = {FA295C9A-9514-4928-9EAF-520C807E3D75}
+		{9C413326-7E44-4584-B8BD-3464DB251F59} = {688C99D6-FD9E-428C-9041-0626A4A2E925}
+		{F7AB9364-36E4-4E82-88BF-225346CB4337} = {14F7BE93-E5B1-45CF-B034-5202C741181C}
+		{3349F2A5-6A5C-48BF-A1B9-752F92B557DF} = {C25C53D1-C70C-4270-9C68-EFF63F61D0E6}
+		{C25C53D1-C70C-4270-9C68-EFF63F61D0E6} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
+		{21938CAB-B688-4B41-BF87-F8D95130C38E} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
+		{14F7BE93-E5B1-45CF-B034-5202C741181C} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
+		{688C99D6-FD9E-428C-9041-0626A4A2E925} = {331B0746-1603-4614-A2AB-65B27BF6E62F}
+		{8D5ECC49-7DFD-4B7A-B19C-E16F1371EF83} = {D1B4CE54-CC77-4A91-B11C-CFE57B10843B}
+		{FA295C9A-9514-4928-9EAF-520C807E3D75} = {D1B4CE54-CC77-4A91-B11C-CFE57B10843B}
 	EndGlobalSection
 EndGlobal

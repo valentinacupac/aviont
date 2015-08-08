@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{32DC66C6-2F85-4CFD-A8E0-597890833147}</ProjectGuid>
+    <ProjectGuid>{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Optivem.OpenData.Domain.Tests</RootNamespace>
-    <AssemblyName>Optivem.OpenData.Domain.Tests</AssemblyName>
+    <RootNamespace>Optivem.OpenData.Infrastructure.Providers.Quandl.Tests</RootNamespace>
+    <AssemblyName>Optivem.OpenData.Infrastructure.Providers.Quandl.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Optivem.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Optivem.Utilities.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -50,12 +54,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="QueryBuilderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Sources\Optivem.OpenData.Infrastructure.Providers.Quandl\Optivem.OpenData.Infrastructure.Providers.Quandl.csproj">
+    <ProjectReference Include="..\..\..\Sources\Infrastructure\Optivem.OpenData.Infrastructure.Providers.Quandl\Optivem.OpenData.Infrastructure.Providers.Quandl.csproj">
       <Project>{bf4c1359-5dd0-4bc6-8284-19a4b89cd2a7}</Project>
-      <Name>Optivem.OpenData.Quandl</Name>
+      <Name>Optivem.OpenData.Infrastructure.Providers.Quandl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Sources\Domain\Optivem.OpenData.Domain\Optivem.OpenData.Domain.csproj">
+      <Project>{3e92a0c4-9908-49ef-b0aa-6d73074ae47c}</Project>
+      <Name>Optivem.OpenData.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Sources\Infrastructure\Optivem.OpenData.Infrastructure\Optivem.OpenData.Infrastructure.csproj">
+      <Project>{f7ab9364-36e4-4e82-88bf-225346cb4337}</Project>
+      <Name>Optivem.OpenData.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
