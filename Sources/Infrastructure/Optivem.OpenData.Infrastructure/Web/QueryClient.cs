@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Optivem.OpenData.Infrastructure
+namespace Optivem.OpenData.Infrastructure.Web
 {
     public class QueryClient : IDisposable
     {

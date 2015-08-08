@@ -42,22 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataQuerySchema.cs" />
-    <Compile Include="IDataPathSerializer.cs" />
-    <Compile Include="IDataQuerySerializer.cs" />
-    <Compile Include="IDataRequestSerializer.cs" />
-    <Compile Include="IDataResponseReader.cs" />
-    <Compile Include="IDataSetReader.cs" />
-    <Compile Include="IDataSetWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryClient.cs" />
-    <Compile Include="Serializers\BaseQueryObjectMapSerializer.cs" />
-    <Compile Include="Serializers\BaseQueryPathFactory.cs" />
-    <Compile Include="Serializers\BaseQuerySerializer.cs" />
-    <Compile Include="Serializers\IQuery.cs" />
-    <Compile Include="Serializers\IQuerySerializer.cs" />
-    <Compile Include="Serializers\QueryStringMapSerializer.cs" />
-    <Compile Include="Serializers\QueryStringSerializer.cs" />
+    <Compile Include="Web\QueryClient.cs" />
+    <Compile Include="Web\BaseQueryObjectMapSerializer.cs" />
+    <Compile Include="Web\BaseQueryPathFactory.cs" />
+    <Compile Include="Web\BaseQuerySerializer.cs" />
+    <Compile Include="Web\IQuery.cs" />
+    <Compile Include="Web\IQuerySerializer.cs" />
+    <Compile Include="Web\QueryStringMapSerializer.cs" />
+    <Compile Include="Web\QueryStringSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\Optivem.OpenData.Domain\Optivem.OpenData.Domain.csproj">
