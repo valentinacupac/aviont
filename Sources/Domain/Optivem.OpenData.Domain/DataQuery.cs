@@ -7,62 +7,15 @@ using System.Threading.Tasks;
 namespace Optivem.OpenData.Domain
 {
     /// <summary>
-    /// Represents a series of parameters (for filtering, aggregation, computation) which would be performed on data - most of these are optional
+    /// Represents a data query
     /// </summary>
-    public class DataQuery : IEnumerable<DataField>
+    public class DataQuery
     {
-        private Dictionary<string, DataField> queryParams;
-
-        /// <summary>
-        /// Constructs a query parameter group
-        /// </summary>
-        /// <param name="queryParams">Series of query parameters</param>
-        public DataQuery(IEnumerable<DataField> queryParams)
+        public DataQuery(Dictionary<string, object> parameters)
         {
-            this.queryParams = queryParams.ToDictionary(e => e.Key, e => e);
+            this.Parameters = parameters;
         }
 
-        /// <summary>
-        /// Retrieves a query parameter using a given key
-        /// </summary>
-        /// <param name="key">Key to retrieve the query parameter</param>
-        /// <returns>Query parameter</returns>
-        public DataField Get(string key)
-        {
-            return queryParams[key];
-        }
-
-        /// <summary>
-        /// Indicates whether there exists a query paramter corresponding to a certain key
-        /// </summary>
-        /// <param name="key">Paramter key whose existence is being tested</param>
-        /// <returns>True if there exists query parameter with the given key, false otherwise</returns>
-        public bool Contains(string key)
-        {
-            return queryParams.ContainsKey(key);
-        }
-
-        /// <summary>
-        /// Retrieves a query parameter using a given key
-        /// </summary>
-        /// <param name="key">Key to retrieve the query parameter</param>
-        /// <returns>Query parameter</returns>
-        public DataField this[string key]
-        {
-            get
-            {
-                return Get(key);
-            }
-        }
-
-        public IEnumerator<DataField> GetEnumerator()
-        {
-            return queryParams.Values.GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        public Dictionary<string, object> Parameters { get; private set; }
     }
 }

@@ -11,6 +11,11 @@ namespace Optivem.OpenData.Domain
     /// </summary>
     public class DataPath
     {
+        public DataPath(Dictionary<string, string> path)
+        {
+            this.Path = path;
+        }
 
+        public Dictionary<string, string> Path { get; private set; }
     }
 }

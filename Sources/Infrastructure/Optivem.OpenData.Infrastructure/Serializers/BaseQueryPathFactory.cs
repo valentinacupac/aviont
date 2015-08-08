@@ -10,7 +10,7 @@ namespace Optivem.OpenData.Infrastructure
 {
     public abstract class BaseQueryPathFactory
     {
-        public BaseQueryPathFactory(Parser parser, DataQuery queryParamGroup)
+        public BaseQueryPathFactory(Parser parser, DataQuerySchema queryParamGroup)
         {
             this.Parser = parser;
             this.QueryParamGroup = queryParamGroup;
@@ -18,7 +18,7 @@ namespace Optivem.OpenData.Infrastructure
 
         public Parser Parser { get; private set; }
 
-        public DataQuery QueryParamGroup { get; private set; }
+        public DataQuerySchema QueryParamGroup { get; private set; }
 
         public string Create(Dictionary<string, string> data)
         {

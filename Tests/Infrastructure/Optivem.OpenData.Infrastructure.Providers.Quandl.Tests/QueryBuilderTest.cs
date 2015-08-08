@@ -10,6 +10,9 @@ namespace Optivem.OpenData.Infrastructure.Providers.Quandl.Tests
     [TestClass]
     public class QueryBuilderTest
     {
+        private const float FLOAT_DELTA = 0.0001F;
+        private const double DOUBLE_DELTA = 0.0001;
+
         [TestMethod]
         public void TestCase1()
         {
@@ -33,51 +36,54 @@ namespace Optivem.OpenData.Infrastructure.Providers.Quandl.Tests
         {
             // Web url is: https://www.quandl.com/api/v1/datasets/WIKI/AAPL.csv?sort_order=asc&exclude_headers=true&rows=3&trim_start=2012-11-01&trim_end=2013-11-30&column=4&collapse=quarterly&transformation=rdiff
 
-            List<string> lines = new List<string>
+            DataField[] expectedDataFields = new DataField[] { new DataField("StockData", CommonTypes.DateTime), new DataField("PriceValue", CommonTypes.Double) };
+            DataHeader expectedHeader = new DataHeader(expectedDataFields);
+
+            List<DataRecord> expectedDataRecords = new List<DataRecord>
             {
-                "2013-03-31,-0.16820266496096",
-                "2013-06-30,-0.10421090679077",
-                "2013-09-30,0.2023049958389"
+                new DataRecord(new DateTime(2013, 3, 31), -0.16820266496096),
+                new DataRecord(new DateTime(2013, 6, 30), -0.10421090679077),
+                new DataRecord(new DateTime(2013, 9, 30), 0.2023049958389),
             };
 
-            string expectedResults = string.Join("\n", lines) + "\n";
+            DataSet expectedDataSet = new DataSet(expectedHeader, expectedDataRecords);
 
-            DataQuery queryParamGroup = QuandlQueryParamGroup.QueryParamGroup;
-            Parser parser = QuandlQueryParser.Parser;
+            QuandlDataProvider provider = new QuandlDataProvider();
 
-
-            IQuerySerializer<Dictionary<string, object>> objectMapSerializer = new QuandlQueryObjectMapSerializer();
-
-            QueryStringMapSerializer stringMapSerializer = new QueryStringMapSerializer(queryParamGroup, parser, objectMapSerializer);
-            
-            string fieldSeparator = ",";
-            string valueSeparator = ":";
-            StringSplitOptions splitOptions = StringSplitOptions.RemoveEmptyEntries;
-            string[] nullStrings = new string[] { "NULL" };
-            
-            QueryStringSerializer stringSerializer = new QueryStringSerializer(queryParamGroup, stringMapSerializer, fieldSeparator, valueSeparator, splitOptions, nullStrings);
-
-            string input = "DatabaseCode:WIKI,TableCode:AAPL,FormatCode:CSV,AuthToken:NULL,TrimStart:2012-11-01,TrimEnd:2013-11-30,SortOrder:Ascending,ExcludeHeader:true,ExcludeData:NULL,Rows:3,Column:4,Frequency:Quarterly,Calculation:rdiff";
-
-            IQuery query = stringSerializer.Deserialize(input);
-            string url = query.ToUrl();
-
-
-            // TODO: Also add conversion from ready-made url into an actual object, which means if user had already done query, that he/she
-            // can also save that query directly, and it will be converted into some internal representation
-
-            string actualResults = null;
-
-            using(QueryClient client = new QueryClient())
+            Dictionary<string, string> dataPathParams = new Dictionary<string, string>()
             {
-                actualResults = client.DownloadString(url);
-            }
+                { "DatabaseCode", "WIKI" },
+                { "TableCode", "AAPL" },
+                { "FormatCode", "CSV" },
+            };
 
+            Dictionary<string, object> dataQueryParams = new Dictionary<string,object>
+            {
+                { "DatabaseCode", "WIKI" },
+                { "TableCode", "AAPL" },
+                { "FormatCode", FileType.CSV },
+                { "AuthToken", null },
+                { "TrimStart", new DateTime(2012, 11, 1)},
+                { "TrimEnd", new DateTime(2013, 11, 30) },
+                { "SortOrder", SortOrder.Ascending },
+                { "ExcludeHeader", true },
+                { "ExcludeData", null },
+                { "Rows", 3},
+                { "Column", 4},
+                { "Frequency", CollapseType.Quarterly },
+                { "Calculation", TransformationType.Rdiff }
+            };
 
-            Assert.AreEqual(expectedResults, actualResults);
+            // TODO: Make it typed
 
+            DataPath dataPath = new DataPath(dataPathParams);
+            DataQuery dataQuery = new DataQuery(dataQueryParams);
 
-            // https://www.quandl.com/api/v1/datasets/WIKI/AAPL.csv?sort_order=asc&exclude_headers=true&rows=3&trim_start=2012-11-01&trim_end=2013-11-30&column=4&collapse=quarterly&transformation=rdiff
+            DataRequest request = new DataRequest(dataPath, dataQuery);
+
+            DataSet actualDataSet = provider.ReadData(request);
+
+            AreEqual(expectedDataSet, actualDataSet);
         }
 
         private static void AreEqual(QuandlQuery expected, QuandlQuery actual)
@@ -95,6 +101,56 @@ namespace Optivem.OpenData.Infrastructure.Providers.Quandl.Tests
             Assert.AreEqual(expected.Column, actual.Column);
             Assert.AreEqual(expected.Frequency, actual.Frequency);
             Assert.AreEqual(expected.Calculation, actual.Calculation);
+        }
+
+        private static void AreEqual(DataSet expected, DataSet actual)
+        {
+            Assert.AreEqual(expected.Header.Fields.Length, actual.Header.Fields.Length);
+
+            int numFields = expected.Header.Fields.Length;
+
+            for (int i = 0; i < numFields; i++)
+            {
+                DataField expectedField = expected.Header.Fields[i];
+                DataField actualField = actual.Header.Fields[i];
+
+                Assert.AreEqual(expectedField.Key, actualField.Key);
+                Assert.AreEqual(expectedField.Type, actualField.Type);
+                Assert.AreEqual(expectedField.IsNullable, actualField.IsNullable);
+            }
+
+            Assert.AreEqual(expected.Records.Count, actual.Records.Count);
+
+            int recordCount = expected.Records.Count;
+
+            for(int i = 0; i < recordCount; i++)
+            {
+                DataRecord expectedRecord = expected.Records[i];
+                DataRecord actualRecord = actual.Records[i];
+
+                Assert.AreEqual(expectedRecord.Values.Length, actualRecord.Values.Length);
+
+                int fieldCount = expectedRecord.Values.Length;
+
+                for(int j = 0; j < fieldCount; j++)
+                {
+                    object expectedValue = expectedRecord.Values[j];
+                    object actualValue = actualRecord.Values[j];
+
+                    if(expectedValue != null && actualValue != null && expectedValue.GetType() == CommonTypes.Float && actualValue.GetType() == CommonTypes.Float)
+                    {
+                        Assert.AreEqual((float)expectedValue, (float)actualValue, FLOAT_DELTA);
+                    }
+                    else if(expectedValue != null && actualValue != null && expectedValue.GetType() == CommonTypes.Double && actualValue.GetType() == CommonTypes.Double)
+                    {
+                        Assert.AreEqual((double)expectedValue, (double)actualValue, DOUBLE_DELTA);
+                    }
+                    else
+                    {
+                        Assert.AreEqual(expectedValue, actualValue);
+                    }
+                }
+            }
         }
     }
 }

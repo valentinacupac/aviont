@@ -39,6 +39,7 @@
     <Compile Include="Enums\FileType.cs" />
     <Compile Include="Enums\SortOrder.cs" />
     <Compile Include="Enums\TransformationType.cs" />
+    <Compile Include="QuandlDataProvider.cs" />
     <Compile Include="Queries\QuandlQuery.cs" />
     <Compile Include="Queries\QuandlQueryBuilder.cs" />
     <Compile Include="Queries\QuandlQueryKeys.cs" />

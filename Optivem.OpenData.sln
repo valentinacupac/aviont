@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Domain", "Sources\Domain\Optivem.OpenData.Domain\Optivem.OpenData.Domain.csproj", "{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Presentation.Windows", "Sources\Optivem.OpenData.Presentation.Windows\Optivem.OpenData.Presentation.Windows.csproj", "{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Presentation.Windows", "Sources\Presentation\Optivem.OpenData.Presentation.Windows\Optivem.OpenData.Presentation.Windows.csproj", "{0E9B164D-FE81-4C9A-911F-D4ACE1BA4B2C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.OpenData.Domain.Tests", "Tests\Domain\Optivem.OpenData.Domain.Tests\Optivem.OpenData.Domain.Tests.csproj", "{32DC66C6-2F85-4CFD-A8E0-597890833147}"
 EndProject

@@ -9,12 +9,12 @@ namespace Optivem.OpenData.Infrastructure
 {
     public abstract class BaseQuerySerializer<T> : IQuerySerializer<T>
     {
-        protected BaseQuerySerializer(DataQuery queryParamGroup)
+        protected BaseQuerySerializer(DataQuerySchema queryParamGroup)
         {
             this.QueryParamGroup = queryParamGroup;
         }
 
-        public DataQuery QueryParamGroup { get; private set; }
+        public DataQuerySchema QueryParamGroup { get; private set; }
 
         public abstract IQuery Deserialize(T query);
 

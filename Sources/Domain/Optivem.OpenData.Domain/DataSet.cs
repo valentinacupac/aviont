@@ -11,6 +11,14 @@ namespace Optivem.OpenData.Domain
     /// </summary>
     public class DataSet
     {
+        public DataSet(DataHeader header, List<DataRecord> records)
+        {
+            this.Header = header;
+            this.Records = records;
+        }
 
+        public DataHeader Header { get; private set; }
+
+        public List<DataRecord> Records { get; private set; }
     }
 }

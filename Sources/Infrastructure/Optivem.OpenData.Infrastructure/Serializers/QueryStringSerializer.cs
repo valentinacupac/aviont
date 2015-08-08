@@ -17,7 +17,7 @@ namespace Optivem.OpenData.Infrastructure
         private string[] fieldSeparatorArray;
         private string[] valueSeparatorArray;
 
-        public QueryStringSerializer(DataQuery paramGroup, IQuerySerializer<Dictionary<string, string>> stringMapSerializer, string fieldSeparator, string valueSeparator, StringSplitOptions splitOptions, string[] nullStrings)
+        public QueryStringSerializer(DataQuerySchema paramGroup, IQuerySerializer<Dictionary<string, string>> stringMapSerializer, string fieldSeparator, string valueSeparator, StringSplitOptions splitOptions, string[] nullStrings)
             : base(paramGroup)
         {
             this.StringMapSerializer = stringMapSerializer;

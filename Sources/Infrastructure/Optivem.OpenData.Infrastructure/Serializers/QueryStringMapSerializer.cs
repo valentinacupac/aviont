@@ -12,7 +12,7 @@ namespace Optivem.OpenData.Infrastructure
     {
         // TODO: Parameter which indicates if key checking needs to occur, depending on whether source is trusted...
 
-        public QueryStringMapSerializer(DataQuery paramGroup, Parser parser, 
+        public QueryStringMapSerializer(DataQuerySchema paramGroup, Parser parser, 
             IQuerySerializer<Dictionary<string, object>> objectMapSerializer)
             : base(paramGroup)
         {
