@@ -11,7 +11,7 @@ namespace Optivem.OpenData.Domain
     /// </summary>
     public class DataSystem
     {
-        public DataSystem(IDataStorage storage, List<IDataProvider> providers)
+        public DataSystem(IDataStorage storage, ICollection<IDataProvider> providers)
         {
             this.Storage = storage;
             this.Providers = providers;
@@ -19,6 +19,6 @@ namespace Optivem.OpenData.Domain
 
         public IDataStorage Storage { get; private set; }
 
-        public List<IDataProvider> Providers { get; private set; }
+        public ICollection<IDataProvider> Providers { get; private set; }
     }
 }

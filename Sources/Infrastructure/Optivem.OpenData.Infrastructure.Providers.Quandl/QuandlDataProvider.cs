@@ -61,5 +61,20 @@ namespace Optivem.OpenData.Infrastructure.Providers.Quandl
 
             return new DataSet(dataHeader, dataRecords);
         }
+
+        public string Name
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public ICollection<string> Tables
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public DataSet ReadData(string table, DataRequest request)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

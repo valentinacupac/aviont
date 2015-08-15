@@ -39,7 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataService.cs" />
+    <Compile Include="IDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Optivem.OpenData.Domain\Optivem.OpenData.Domain.csproj">
+      <Project>{3e92a0c4-9908-49ef-b0aa-6d73074ae47c}</Project>
+      <Name>Optivem.OpenData.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

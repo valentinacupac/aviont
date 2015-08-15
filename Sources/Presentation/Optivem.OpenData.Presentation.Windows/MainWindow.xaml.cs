@@ -23,6 +23,7 @@ namespace Optivem.OpenData.Presentation.Windows
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainViewModel();
         }
     }
 }

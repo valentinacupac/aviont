@@ -12,10 +12,20 @@ namespace Optivem.OpenData.Domain
     public interface IDataProvider
     {
         /// <summary>
+        /// Returns the name of the data provider
+        /// </summary>
+        string Name { get; }
+
+        /// <summary>
+        /// Returns collection of table keys which are accessible from the provider
+        /// </summary>
+        ICollection<string> Tables { get; }
+
+        /// <summary>
         /// Reads data from the external data provider
         /// </summary>
         /// <param name="request">Defines request for which data should be retrieved</param>
         /// <returns>Result data set which was read from the provider</returns>
-        DataSet ReadData(DataRequest request);
+        DataSet ReadData(string table, DataRequest request);
     }
 }
