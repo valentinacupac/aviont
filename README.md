@@ -6,10 +6,9 @@ This is the chief motivation for the Optivem OpenData project - to make life eas
 
 The purpose of this project is to enable easy access to various OpenData sources, providing both command line and Windows GUI access. Data is retrieved from Quandl (Financial & Economics OpenData).
 
+## UI Prototype
+
 ![UI Prototype](https://github.com/optivem/optivem-opendata-cs/blob/master/Media/ui-prototype.png)
-
-
-
 
 ## Documentation
 
