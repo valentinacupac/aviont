@@ -6,7 +6,10 @@ This is the chief motivation for the Optivem OpenData project - to make life eas
 
 The purpose of this project is to enable easy access to various OpenData sources, providing both command line and Windows GUI access. Data is retrieved from Quandl (Financial & Economics OpenData).
 
-![UI Mock](https://github.com/optivem/optivem-opendata-cs/tree/master/Media/optivem-opendata-ui-mock.PNG)
+![UI Prototype](https://github.com/optivem/optivem-opendata-cs/blob/master/Media/ui-prototype.png)
+
+
+
 
 ## Documentation
 
@@ -23,3 +26,5 @@ This project is licenced under the Apache License Version 2.0, which means it ca
 ## Contact
 
 Any questions or comments can be sent to valentina.cupac [at] optivem [dot] com.
+
+![Logo](http://www.optivem.com/wp-content/uploads/2015/07/logo_full_236_41.png) 
