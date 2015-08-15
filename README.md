@@ -12,7 +12,7 @@ The purpose of this project is to enable easy access to various OpenData sources
 
 ## Documentation
 
-Project documentation is accessible via the [Wiki](../../wiki) page.
+Project documentation is on the [Wiki](../../wiki) page.
 
 ## Issues
 
