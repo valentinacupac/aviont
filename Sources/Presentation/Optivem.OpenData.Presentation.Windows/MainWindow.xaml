@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Optivem.OpenData.Presentation.Windows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Optivem OpenData" Height="350" Width="525">
+        Title="Optivem OpenData" Height="442" Width="836">
 
     <DockPanel LastChildFill="True">
 
@@ -22,25 +22,47 @@
         </Menu>
 
         <StatusBar Name="statusbar" DockPanel.Dock="Bottom">Ready</StatusBar>
-        <Grid>
+        <Grid DockPanel.Dock="Right">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200" MinWidth="150" />
                 <ColumnDefinition Width="5" />
                 <ColumnDefinition Width="*" MinWidth="200" />
             </Grid.ColumnDefinitions>
             <TreeView Grid.Column="0">
-                <TreeViewItem Header="Database 1">
-                    <TreeViewItem Header="Table 11" />
-                    <TreeViewItem Header="Table 12" />
-                    <TreeViewItem Header="Table 13" />
+                <TreeViewItem Header="Quandl">
+                    <TreeViewItem Header="YFinance" />
+                    <TreeViewItem Header="GFinance" />
+                    <TreeViewItem Header="WIKI Stock" />
                 </TreeViewItem>
-                <TreeViewItem Header="Database 2">
+                <TreeViewItem Header="Socrata">
                     <TreeViewItem Header="Table 21" />
                     <TreeViewItem Header="Table 22" />
                 </TreeViewItem>
             </TreeView>
             <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
-            <TextBlock Grid.Column="2" FontSize="55" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap">Content</TextBlock>
+            <Grid Grid.Column="2" DockPanel.Dock="Right">
+
+
+                <DockPanel LastChildFill="True">
+                    <StackPanel DockPanel.Dock="Bottom" FlowDirection="LeftToRight">
+                        <Button HorizontalAlignment="Right">Export Data</Button>
+                    </StackPanel>
+
+                    <TabControl DockPanel.Dock="Top">
+                        <TabItem Header="AAPL">
+                            <DataGrid ItemsSource="{Binding StockData}" />
+                        </TabItem>
+                        <TabItem Header="MSFT">
+                            <Grid Background="#FFE5E5E5"/>
+                        </TabItem>
+                        <TabItem Header="WMT">
+                            <Grid Background="#FFE5E5E5"/>
+                        </TabItem>
+                    </TabControl>
+                </DockPanel>
+
+
+            </Grid>
         </Grid>
     </DockPanel>
 </Window>
