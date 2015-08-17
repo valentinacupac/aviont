@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Optivem.Utilities;
+using Optivem.Immerest;
 using System.Collections.Generic;
 using Optivem.Aviont.Domain;
 using Optivem.Aviont.Infrastructure.Providers.Quandl;

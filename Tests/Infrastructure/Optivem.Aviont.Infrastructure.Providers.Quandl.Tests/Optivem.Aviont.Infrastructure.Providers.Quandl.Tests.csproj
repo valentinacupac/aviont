@@ -6,8 +6,8 @@
     <ProjectGuid>{E2C2A541-4ECB-4CDF-ABAD-B61A8903E480}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Optivem.OpenData.Infrastructure.Providers.Quandl.Tests</RootNamespace>
-    <AssemblyName>Optivem.OpenData.Infrastructure.Providers.Quandl.Tests</AssemblyName>
+    <RootNamespace>Optivem.Aviont.Infrastructure.Providers.Quandl.Tests</RootNamespace>
+    <AssemblyName>Optivem.Aviont.Infrastructure.Providers.Quandl.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,8 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Optivem.Utilities">
-      <HintPath>..\..\..\Libraries\Optivem.Utilities.dll</HintPath>
+    <Reference Include="Optivem.Immerest">
+      <HintPath>..\..\..\Libraries\Optivem.Immerest.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>

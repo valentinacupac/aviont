@@ -7,8 +7,8 @@
     <ProjectGuid>{3E92A0C4-9908-49EF-B0AA-6D73074AE47C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Optivem.OpenData.Domain</RootNamespace>
-    <AssemblyName>Optivem.OpenData.Domain</AssemblyName>
+    <RootNamespace>Optivem.Aviont.Domain</RootNamespace>
+    <AssemblyName>Optivem.Aviont.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

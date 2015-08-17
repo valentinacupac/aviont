@@ -7,8 +7,8 @@
     <ProjectGuid>{F7AB9364-36E4-4E82-88BF-225346CB4337}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Optivem.OpenData.Infrastructure</RootNamespace>
-    <AssemblyName>Optivem.OpenData.Infrastructure</AssemblyName>
+    <RootNamespace>Optivem.Aviont.Infrastructure</RootNamespace>
+    <AssemblyName>Optivem.Aviont.Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Optivem.Utilities">
-      <HintPath>..\..\..\Libraries\Optivem.Utilities.dll</HintPath>
+    <Reference Include="Optivem.Immerest">
+      <HintPath>..\..\..\Libraries\Optivem.Immerest.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
