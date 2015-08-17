@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF4C1359-5DD0-4BC6-8284-19A4B89CD2A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Optivem.OpenData.Infrastructure.Providers.Quandl</RootNamespace>
+    <AssemblyName>Optivem.OpenData.Infrastructure.Providers.Quandl</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Enums\CollapseType.cs" />
+    <Compile Include="Enums\FileType.cs" />
+    <Compile Include="Enums\SortOrder.cs" />
+    <Compile Include="Enums\TransformationType.cs" />
+    <Compile Include="QuandlDataProvider.cs" />
+    <Compile Include="Queries\QuandlQuery.cs" />
+    <Compile Include="Queries\QuandlQueryBuilder.cs" />
+    <Compile Include="Queries\QuandlQueryKeys.cs" />
+    <Compile Include="Queries\QuandlQueryObjectMapSerializer.cs" />
+    <Compile Include="Queries\QuandlQueryParamGroup.cs" />
+    <Compile Include="Queries\QuandlQueryParser.cs" />
+    <Compile Include="Utilities\QuandlTypes.cs" />
+    <Compile Include="Utilities\QuandlUrlConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Optivem.Utilities">
+      <HintPath>..\..\..\Libraries\Optivem.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Optivem.Aviont.Domain\Optivem.Aviont.Domain.csproj">
+      <Project>{3e92a0c4-9908-49ef-b0aa-6d73074ae47c}</Project>
+      <Name>Optivem.OpenData.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Optivem.Aviont.Infrastructure\Optivem.Aviont.Infrastructure.csproj">
+      <Project>{f7ab9364-36e4-4e82-88bf-225346cb4337}</Project>
+      <Name>Optivem.OpenData.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

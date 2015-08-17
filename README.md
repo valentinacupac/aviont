@@ -1,14 +1,14 @@
-# Optivem OpenData (C#)
+# Aviont
 
 One of the most time consuming parts in data analytics is preparing, selecting and integrating data which needs to be used. The problem is - data is scattered everywhere (some data is on the internet, other data is on our local disks, yet other data is in databases), data is in different formats (delimited files, databases, etc).
 
-This is the chief motivation for the Optivem OpenData project - to make life easier for data analysts by reducing the 50-80% time which gets spent on the mundane time-consuming task of cleaning, filtering, sorting and aggregating data. This project provides a generic solution to help you connect to various data providers, and to centralize the acquired data.
+This is the chief motivation for the Aviont project - to make life easier for data analysts by reducing the 50-80% time which gets spent on the mundane time-consuming task of cleaning, filtering, sorting and aggregating data. This project provides a generic solution to help you connect to various data providers, and to centralize the acquired data.
 
 The purpose of this project is to enable easy access to various OpenData sources, providing both command line and Windows GUI access. Data is retrieved from Quandl (Financial & Economics OpenData).
 
 ## UI Prototype
 
-![UI Prototype](https://github.com/optivem/optivem-opendata-cs/blob/master/Media/ui-prototype.png)
+![UI Prototype](https://github.com/optivem/aviont/blob/master/Media/ui-prototype.png)
 
 ## Documentation
 
